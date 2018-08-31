@@ -1,0 +1,20 @@
+public class LargestPrimeFactor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		long value=600851475143L;
+		long largestprime=-1;
+		for(int i=3;i<Math.sqrt(value);i+=2) {
+			while(value%i==0) {
+				value/=i;
+				largestprime=i;
+			}
+		}
+		if(value>2) {
+			largestprime=value;
+		}
+		System.out.println(largestprime);
+		
+	}
+
+}
